@@ -1,4 +1,8 @@
-rpgmanager\model\Guerrero.class
 rpgmanager\model\Mago.class
+rpgmanager\interfaces\Sanador.class
+rpgmanager\model\BatallaCompleta.class
+rpgmanager\interfaces\Habilidoso.class
+rpgmanager\model\Guerrero.class
+rpgmanager\interfaces\Equipable.class
 rpgmanager\model\Arquero.class
 rpgmanager\model\Batalla.class

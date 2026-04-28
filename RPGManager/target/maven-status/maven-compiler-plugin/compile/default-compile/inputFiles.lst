@@ -1,6 +1,10 @@
 C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\com\mycompany\rpgmanager\RPGManager.java
+C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\interfaces\Equipable.java
+C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\interfaces\Habilidoso.java
+C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\interfaces\Sanador.java
 C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\model\Arquero.java
 C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\model\Batalla.java
+C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\model\BatallaCompleta.java
 C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\model\Guerrero.java
 C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\model\Mago.java
 C:\Users\MAGG\OneDrive\Documentos\GitHub\rpg-manager-poo\RPGManager\src\main\java\rpgmanager\model\Personaje.java
