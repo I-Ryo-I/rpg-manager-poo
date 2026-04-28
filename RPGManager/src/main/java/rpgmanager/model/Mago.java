@@ -1,6 +1,10 @@
 package rpgmanager.model;
 
-public class Mago extends Personaje {
+import rpgmanager.interfaces.Habilidoso;
+import rpgmanager.interfaces.Sanador;
+
+public class Mago extends Personaje implements Habilidoso, Sanador {
+
     private int mana;
     private int manaMax;
 
@@ -30,6 +34,32 @@ public class Mago extends Personaje {
         System.out.println(nombre + " recupera " + cantidad + " de maná. Maná: " + mana + "/" + manaMax);
     }
 
-    public int getMana() { return mana; }
-    public int getManaMax() { return manaMax; }
+    // --- Habilidoso ---
+    @Override
+    public void usarHabilidadEspecial(Personaje objetivo) {
+        if (mana >= 20) {
+            mana -= 20;
+            System.out.println(nombre + " lanza ¡Bola de Fuego! sobre " + objetivo.nombre);
+            objetivo.recibirDano(40);
+        } else {
+            System.out.println(nombre + " sin maná para Bola de Fuego.");
+        }
+    }
+
+    @Override
+    public int getCostoHabilidad() { return 20; }
+
+    @Override
+    public String getNombreHabilidad() { return "Bola de Fuego"; }
+
+    // --- Sanador ---
+    @Override
+    public void sanar(Personaje objetivo) {
+        int curado = Math.min(25, objetivo.puntosVidaMax - objetivo.puntosVida);
+        objetivo.puntosVida += curado;
+        System.out.println(nombre + " sana a " + objetivo.nombre + " por " + curado + " HP.");
+    }
+
+    @Override
+    public int getPotenciaSanacion() { return 25; }
 }

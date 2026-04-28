@@ -1,8 +1,14 @@
 package rpgmanager.model;
 
-public class Guerrero extends Personaje {
+import rpgmanager.interfaces.Habilidoso;
+import rpgmanager.interfaces.Equipable;
+
+public class Guerrero extends Personaje implements Habilidoso, Equipable {
+
     private int fuerza;
     private int defensa;
+    private String itemEquipado = "Sin equipo";
+    private int costoHabilidad = 30;
 
     public Guerrero(String nombre, int nivel) {
         super(nombre, nivel, 100 + nivel * 10);
@@ -23,6 +29,26 @@ public class Guerrero extends Personaje {
         System.out.println(nombre + " bloquea con su escudo (defensa: " + defensa + ")");
     }
 
-    public int getFuerza() { return fuerza; }
-    public int getDefensa() { return defensa; }
+    @Override
+    public void usarHabilidadEspecial(Personaje objetivo) {
+        System.out.println(nombre + " usa ¡Golpe Devastador! sobre " + objetivo.nombre);
+        objetivo.recibirDano(50);
+    }
+
+    @Override
+    public int getCostoHabilidad() { return costoHabilidad; }
+
+    @Override
+    public String getNombreHabilidad() { return "Golpe Devastador"; }
+    
+
+    @Override
+    public void equiparItem(String item) {
+        this.itemEquipado = item;
+        System.out.println(nombre + " equipó: " + item);
+    }
+
+    @Override
+    public String getItemEquipado() { return itemEquipado; }
 }
+        
